@@ -7,7 +7,7 @@
 <body>
   <div id="cesiumContainer" style="width: 100%; height:100%"></div>
   <script>
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmNzA3OTlmOC00M2IyLTRiMmEtYjA4Ny1kNjU0MTBkNjYzZDIiLCJpZCI6MTA2MDMsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NTY5Njc2MDR9.AhSRJ-EU8CD3sXP9EtD4tCq7obDsI1ZdUgXPAKXzAag';
+    Cesium.Ion.defaultAccessToken = '<CESIUM_ACCESS_TOKEN>';
     var viewer = new Cesium.Viewer('cesiumContainer', {
     skyBox : false,
     skyAtmosphere: false,
@@ -44,12 +44,12 @@ var tonerLayer = globe.imageryLayers.addImageryProvider(
         credit : 'Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under CC BY SA.'
     })
 );
-tonerLayer.alpha = 0.8;
+tonerLayer.alpha = 0.3;
 tonerLayer.brightness = 3;
 tonerLayer.contrast = 0.7;
 
 
-viewer.dataSources.add(Cesium.CzmlDataSource.load('Telesat_shells.json'));
+viewer.dataSources.add(Cesium.CzmlDataSource.load('Telesat_2shell.json'));
 
 
 viewer.camera.flyTo({
